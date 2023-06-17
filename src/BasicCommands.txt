@@ -1,0 +1,14 @@
+
+po instalaci apod. 
+git config --list
+git config --global user.name "Petr Novák"
+git config --global user.email "petr@novek.com"
+
+Vytvoreni repository
+git status
+git init //spusteno v dannem prostoru (pokud jiz existuje tak je prepsan)
+deli se na :
+1)working area(mistni slozka-sem se dostane git init), 
+2)stage area (sledovane ale necomittle po prikaze git add), 
+3)local repository(zmeny propsane do gitu-) prikazem
+git commit -m "Initial commit" (-m = message)
