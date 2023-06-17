@@ -13,4 +13,5 @@ deli se na :
 3)local repository(zmeny propsane do gitu-) prikazem
 git commit -m "Initial commit" (-m = message)
 -----------------------
-some change to next commit
+1.some change to next commit.
+2. some next commit 2.
