@@ -15,3 +15,4 @@ git commit -m "Initial commit" (-m = message)
 -----------------------
 1.some change to next commit.
 2. some next commit 2.
+3. some next change 3
