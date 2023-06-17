@@ -12,3 +12,5 @@ deli se na :
 2)stage area (sledovane ale necomittle po prikaze git add), 
 3)local repository(zmeny propsane do gitu-) prikazem
 git commit -m "Initial commit" (-m = message)
+-----------------------
+some change to next commit
