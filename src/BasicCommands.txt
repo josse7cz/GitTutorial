@@ -1,8 +1,8 @@
 
 po instalaci apod. 
-git config --list
-git config --global user.name "Petr Novák"
-git config --global user.email "petr@novek.com"
+git config --list //prehled nastavenych pravidel
+git config --global user.name "Petr Novák" //nastaveni jmena uzivatele gitu
+git config --global user.email "petr@novek.com" 
 
 Vytvoreni repository
 git status
@@ -17,3 +17,8 @@ git commit -m "Initial commit" (-m = message)
 2. some next commit 2.
 3. some next change 3
 4. some changes
+git log (vypise vsechny commity)
+------------------------------
+vymazani zaznamu HEAD (pri obnove smazaneho a sledovaneho souboru (vratime se k predchozimu commitu))
+git reset HEAD slouzi pro navrat prikazu add
+git checkout . se vrati k predchozimu commitu
