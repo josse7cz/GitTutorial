@@ -11,14 +11,24 @@ deli se na :
 1)working area(mistni slozka-sem se dostane git init), 
 2)stage area (sledovane ale necomittle po prikaze git add), 
 3)local repository(zmeny propsane do gitu-) prikazem
-git commit -m "Initial commit" (-m = message)
+git commit -m "e.g. Initial commit" (-m = message)
+or
+git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession" (prikaz nastavujici pojmenovani commitů pres aplikaci notepad-nastavuje ho defaultne)
 -----------------------
-1.some change to next commit.
-2. some next commit 2.
-3. some next change 3
-4. some changes
-git log (vypise vsechny commity)
+git log (vypise podrobnosti a vsechny commity)
 ------------------------------
 vymazani zaznamu HEAD (pri obnove smazaneho a sledovaneho souboru (vratime se k predchozimu commitu))
 git reset HEAD slouzi pro navrat prikazu add
 git checkout . se vrati k predchozimu commitu
+git push (nahrava se na remote, ale musi již být napárovaný s uctem a repository on Git?)
+-----------------------
+git clone https://github.com/libgit2/libgit2 mylibgit (klonovani existujiciho adresare do adresare mylibgit)
+git diff (co je zmeneno ale zatím neni připraveno k zapsání)
+git diff --cached ukáže změny, které už jsou připraveny k zapsání
+
+git commit (urcen pro zapsani zmen nachystanych po prikazu git add do git image (repository))
+git commit -a -m 'added new benchmarks' (parametr -a vylucuje nutnost pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
+
+git rm --cached README (odstraneni souboru z prostoru sledovani zmen (napr opomenut do .gitignore))
+git rm (odstraneni souboru z adresare) - pokud je jiz pripraven k zapsani, je treba pouzit parametr -f
+git mv stare_jmeno_souboru nove_jmeno_souboru (nutno pouzit pri prejmenovani souboru)
