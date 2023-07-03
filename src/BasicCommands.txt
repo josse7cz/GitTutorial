@@ -38,4 +38,4 @@ git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné so
 Nová větev
 git branch <název>
     git branch pythonic_files
-Dále nutno přepnout se do této větve příkazem git checkout <nazev branch> (mozne vypsat větve příkazem git branch)
+Dále možné přepínat se mezi větvemi příkazem git checkout <nazev branch> (mozne vypsat větve příkazem git branch)
