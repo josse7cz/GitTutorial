@@ -46,3 +46,13 @@ git log --online --all --graph
 merge-spojovani větví (zalezi co vse bylo zmeneno) pokud 
  jsme zmenili master i dalsi je treba vice commitů
 prepneme se do master verze prikazem git checkout master
+tedy ulozime zmeny v master a pouzijeme prikaz:
+ git merge <nazev spojovane vetve>
+ git merge pythonic_files (hotovo :)
+ nepouzitelnou větev je dále možné odstranit:
+ git branche -d <nazev branche>
+ -----------------------
+ REMOTE repository
+ zkontrolujeme zda uz je nebo neni priidan
+ cat .git/config 
+ git remote (pouzivat sifrovane spojeni SSH!)
