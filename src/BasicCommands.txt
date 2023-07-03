@@ -55,4 +55,8 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  REMOTE repository
  zkontrolujeme zda uz je nebo neni priidan
  cat .git/config 
- git remote (pouzivat sifrovane spojeni SSH!)
+ -------------
+ Nutne vygenerovat SSH klic (pouzivat sifrovane spojeni SSH!)
+ git remote 
+ git push -u origin master
+
