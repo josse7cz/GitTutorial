@@ -27,8 +27,15 @@ git diff (co je zmeneno ale zatím neni připraveno k zapsání)
 git diff --cached ukáže změny, které už jsou připraveny k zapsání
 
 git commit (urcen pro zapsani zmen nachystanych po prikazu git add do git image (repository))
-git commit -a -m 'added new benchmarks' (parametr -a vylucuje nutnost pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
+git commit -a -m 'nejaky popis zmeny' (parametr -a vylucuje nutnost pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
+git mv stare_jmeno_souboru nove_jmeno_souboru (prejmenovani souboru)
+příklad(nutno včetně cesty) git mv src/utils/TextFile.txt src/utils/Notepad.txt
 
 git rm --cached README (odstraneni souboru z prostoru sledovani zmen (napr opomenut do .gitignore))
 git rm (odstraneni souboru z adresare) - pokud je jiz pripraven k zapsani, je treba pouzit parametr -f
-git mv stare_jmeno_souboru nove_jmeno_souboru (nutno pouzit pri prejmenovani souboru)
+git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné soubory apod.)
+
+Nová větev
+git branch <název>
+    git branch pythonic_files
+Dále nutno přepnout se do této větve příkazem git checkout <nazev branch> (mozne vypsat větve příkazem git branch)
