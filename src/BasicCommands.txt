@@ -8,7 +8,7 @@ Vytvoreni repository
 git status
 git init //spusteno v dannem prostoru (pokud jiz existuje tak je prepsan)
 deli se na :
-1)working area(mistni slozka-sem se dostane git init), 
+1)working area(mistni slozka-sem se dostaneme prikazem git init), 
 2)stage area (sledovane ale necomittle po prikaze git add), 
 3)local repository(zmeny propsane do gitu-) prikazem
 git commit -m "e.g. Initial commit" (-m = message)
