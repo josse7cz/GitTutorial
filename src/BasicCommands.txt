@@ -38,4 +38,11 @@ git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné so
 Nová větev
 git branch <název>
     git branch pythonic_files
-Dále možné přepínat se mezi větvemi příkazem git checkout <nazev branch> (mozne vypsat větve příkazem git branch)
+Dále možné přepínat se mezi větvemi příkazem git checkout 
+ <nazev branch> (mozne vypsat větve příkazem git branch)
+pokud nemame nainstalovany git graph mozno zobrazit zmeny prikazem:
+git log --online --all --graph
+---------------------
+merge-spojovani větví (zalezi co vse bylo zmeneno) pokud 
+ jsme zmenili master i dalsi je treba vice commitů
+prepneme se do master verze prikazem git checkout master
