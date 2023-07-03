@@ -57,6 +57,7 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  cat .git/config 
  -------------
  Nutne vygenerovat SSH klic (pouzivat sifrovane spojeni SSH!)
- git remote 
- git push -u origin master
+ git remote (nastaveni vzdaleneho repozitare)
+
+ git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
