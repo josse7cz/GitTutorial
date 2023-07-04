@@ -63,9 +63,10 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  Nutne mit vygenerovany SSH klic (pouzivat sifrovane spojeni SSH!)
  spustit git bash 
  ssh-keygen -o 
- vygeneruje se v Users<aktualni user>
- cat <nazev.pub> a toto zkopirovat do github uctu
- git clone <adresa z git SSH> (nastaveni vzdaleneho repozitare)
+ vygeneruje se v Users/<aktualni user>/.ssh 
+ (vykopirovat vygenerovaný klíč příkazem) cat <nazev.pub> a toto zkopirovat do github uctu
+ klonování repozitáře:
+ git clone <adresa z github SSH> (nastaveni vzdaleneho repozitare)
 dojde ke stazeni repozitare do pc
 dále vytvoříme novou větev
 git branch <název>
