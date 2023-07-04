@@ -58,9 +58,13 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  -------------
  Pripojeni noveho pc
  nainstalovani gitu 
- --------------
  Nutne vygenerovat SSH klic (pouzivat sifrovane spojeni SSH!)
- git remote (nastaveni vzdaleneho repozitare)
+ spustit git bash 
+ ssh-keygen -o 
+ vygeneruje se v users<aktualni user>
+ cat (nazev.pub) a toto zkopirovat do github uctu
+ git clone <adresa z git SSH> (nastaveni vzdaleneho repozitare)
+dojde ke stazeni repozitare do pc
 dále vytvoříme novou větev
 git branch <název>
 a prepneme se do teto vetve
