@@ -61,6 +61,14 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  --------------
  Nutne vygenerovat SSH klic (pouzivat sifrovane spojeni SSH!)
  git remote (nastaveni vzdaleneho repozitare)
+dále vytvoříme novou větev
+git branch <název>
+a prepneme se do teto vetve
+git checkout draw
+nyni nejake zmeny a pak nutne zalozit branch v remote, to provedeme:
+git remote
+git push origin (selze pokud jsme vytvorili novou vetev a pouzijeme prikaz)
+  git push --set-upstream origin draw (vytvoříme vetev na remote)
 
  git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
