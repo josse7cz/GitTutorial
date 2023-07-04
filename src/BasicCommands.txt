@@ -63,6 +63,9 @@ git branch <název>
 a prepneme se do teto vetve
 git checkout draw
 nyni nejake zmeny a pak nutne zalozit branch v remote, to provedeme:
+git remote
+git push origin (selze pokud jsme vytvorili novou vetev a pouzijeme prikaz)
+  git push --set-upstream origin draw (vytvoříme vetev na remote)
 
  git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
