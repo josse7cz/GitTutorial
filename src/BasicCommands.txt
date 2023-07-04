@@ -60,13 +60,7 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  nainstalovani gitu 
  --------------
  Nutne vygenerovat SSH klic (pouzivat sifrovane spojeni SSH!)
- spustit git bash 
- ssh-keygen -o 
- vygeneruje se v users<aktualni user>
- cat (nazev.pub) a toto zkopirovat do github uctu
- git clone <adresa z git SSH> (nastaveni vzdaleneho repozitare)
-dojde ke stazeni repozitare do pc
-------------------------
+ git remote (nastaveni vzdaleneho repozitare)
 
  git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
