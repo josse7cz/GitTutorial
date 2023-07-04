@@ -5,6 +5,7 @@ git config --global user.name "Petr Novák" //nastaveni jmena uzivatele gitu
 git config --global user.email "petr@novek.com" 
 
 Vytvoreni repository
+---------------------
 git status
 git init //spusteno v dannem prostoru (pokud jiz existuje tak je prepsan)
 deli se na :
@@ -49,20 +50,21 @@ prepneme se do master verze prikazem git checkout master
 tedy ulozime zmeny v master a pouzijeme prikaz:
  git merge <nazev spojovane vetve>
  git merge pythonic_files (hotovo :)
- nepouzitelnou větev je dále možné odstranit:
+ nepotrebnou větev je dále možné odstranit příkazem:
  git branche -d <nazev branche>
  -----------------------
  REMOTE repository
- zkontrolujeme zda uz je nebo neni priidan
- cat .git/config 
+ zkontrolujeme zda uz je nebo neni nastaven
+ git config --list
+ 
  -------------
- Pripojeni noveho pc
- nainstalovani gitu 
- Nutne vygenerovat SSH klic (pouzivat sifrovane spojeni SSH!)
+ Pripojeni noveho pc k repository
+ nainstalovani gitu a nastaveni viz vyse (git config --list....)
+ Nutne mit vygenerovany SSH klic (pouzivat sifrovane spojeni SSH!)
  spustit git bash 
  ssh-keygen -o 
- vygeneruje se v users<aktualni user>
- cat (nazev.pub) a toto zkopirovat do github uctu
+ vygeneruje se v Users<aktualni user>
+ cat <nazev.pub> a toto zkopirovat do github uctu
  git clone <adresa z git SSH> (nastaveni vzdaleneho repozitare)
 dojde ke stazeni repozitare do pc
 dále vytvoříme novou větev
@@ -71,8 +73,10 @@ a prepneme se do teto vetve
 git checkout draw
 nyni nejake zmeny a pak nutne zalozit branch v remote, to provedeme:
 git remote
-git push origin (selze pokud jsme vytvorili novou vetev a pouzijeme prikaz)
-  git push --set-upstream origin draw (vytvoříme vetev na remote)
+git push origin (selze pokud jsme vytvorili novou vetev, která není na remote a pouzijeme prikaz)
+  git push --set-upstream origin draw (vytvoříme vetev na remote a prepneme se do ni.)
+   POZOR pri uprave v jinych nez mnou vytvorenych souborech, vznikaji konflikty!!!
+
 
  git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
