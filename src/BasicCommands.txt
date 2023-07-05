@@ -1,4 +1,4 @@
-
+clear prikaz pro vycisteni okna
 po instalaci apod. 
 git config --list //prehled nastavenych pravidel
 git config --global user.name "Petr Novák" //nastaveni jmena uzivatele gitu
@@ -9,14 +9,14 @@ Vytvoreni repository
 git status
 git init //spusteno v dannem prostoru (pokud jiz existuje tak je prepsan)
 deli se na :
-1)working area(mistni slozka-sem se dostaneme prikazem git init), 
-2)stage area (sledovane ale necomittle po prikaze git add), 
+1)working area(mistni slozka- zalozi se prikazem git init), 
+2)stage area (sledovane ale necomittle po prikaze git add .), 
 3)local repository(zmeny propsane do gitu-) prikazem
-git commit -m "e.g. Initial commit" (-m = message)
+  git commit -m "e.g. Initial commit" (-m = message "text our message")
 or
 git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession" (prikaz nastavujici pojmenovani commitů pres aplikaci notepad-nastavuje ho defaultne)
 -----------------------
-git log (vypise podrobnosti a vsechny commity)
+git log --oneline(vypise podrobnosti a vsechny commity-moznost ulozit do souboru. ukoncit vypis klavese q)
 ------------------------------
 vymazani zaznamu HEAD (pri obnove smazaneho a sledovaneho souboru (vratime se k predchozimu commitu))
 git reset HEAD slouzi pro navrat prikazu add
@@ -41,7 +41,7 @@ git branch <název>
     git branch pythonic_files
 Dále možné přepínat se mezi větvemi příkazem git checkout 
  <nazev branch> (mozne vypsat větve příkazem git branch)
-pokud nemame nainstalovany git graph mozno zobrazit zmeny prikazem:
+pokud nemame nainstalovany git graph mozno zobrazit stromovou strukturu prikazem:
 git log --online --all --graph
 ---------------------
 merge-spojovani větví (zalezi co vse bylo zmeneno) pokud 
@@ -53,26 +53,27 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  nepotrebnou větev je dále možné odstranit příkazem:
  git branche -d <nazev branche>
  -----------------------
- REMOTE repository
- zkontrolujeme zda uz je nebo neni nastaven
+ REMOTE repository (GitHub etc.)
+ zkontrolujeme zda uz je nebo neni nastaven uzivatel, remote apod.
  git config --list
- 
+ git remote
+ dalsi prikazy viz níže po prikazu git clone...
  -------------
- Pripojeni noveho pc k repository
+ Pripojeni noveho pc k remote repository
  nainstalovani gitu a nastaveni viz vyse (git config --list....)
  Nutne mit vygenerovany SSH klic (pouzivat sifrovane spojeni SSH!)
  spustit git bash 
  ssh-keygen -o 
  vygeneruje se v Users/<aktualni user>/.ssh 
- (vykopirovat vygenerovaný klíč příkazem) cat <nazev.pub> a toto zkopirovat do github uctu
+ (vykopirovat vygenerovaný klíč příkazem) cat <nazev.pub> (type <nazev souboru>)a toto zkopirovat do github uctu
  klonování repozitáře:
- git clone <adresa z github SSH> (nastaveni vzdaleneho repozitare)
+ git clone <adresa z github zálozka SSH> (nastaveni vzdaleneho repozitare)
 dojde ke stazeni repozitare do pc
-dále vytvoříme novou větev
+dále muzeme vytvorit novou větev prikazem
 git branch <název>
 a prepneme se do teto vetve
-git checkout draw
-nyni nejake zmeny a pak nutne zalozit branch v remote, to provedeme:
+git checkout <název vetve>
+nyni nejake zmeny a pak nutne zalozit novou branch v remote, to provedeme:
 git remote
 git push origin (selze pokud jsme vytvorili novou vetev, která není na remote a pouzijeme prikaz)
   git push --set-upstream origin draw (vytvoříme vetev na remote a prepneme se do ni.)
