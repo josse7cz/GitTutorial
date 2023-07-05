@@ -1,3 +1,4 @@
+bez vsech techto prikazu se obejdeme s pouziti GitHubDesktop az na řešní konfliktů?
 clear prikaz pro vycisteni okna
 po instalaci apod. 
 git config --list //prehled nastavenych pravidel
@@ -71,14 +72,13 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
 dojde ke stazeni repozitare do pc
 dále muzeme vytvorit novou větev prikazem
 git branch <název>
-a prepneme se do teto vetve
+ a prepneme se do teto vetve
 git checkout <název vetve>
 nyni nejake zmeny a pak nutne zalozit novou branch v remote, to provedeme:
 git remote
 git push origin (selze pokud jsme vytvorili novou vetev, která není na remote a pouzijeme prikaz)
-  git push --set-upstream origin draw (vytvoříme vetev na remote a prepneme se do ni.)
+  git push --set-upstream origin <nazev branche> (vytvoříme vetev na remote a prepneme se do ni.)
    POZOR pri uprave v jinych nez mnou vytvorenych souborech, vznikaji konflikty!!!
-
 
  git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
