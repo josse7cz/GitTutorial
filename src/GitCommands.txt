@@ -1,31 +1,38 @@
-bez vsech techto prikazu se obejdeme s pouziti GitHubDesktop az na řešní konfliktů?
+bez vsech techto prikazu se obejdeme při pouziti GitHubDesktop az na řešní konfliktů?
 clear prikaz pro vycisteni okna
+q klavesa se pouziva pro ukonceni vypisu nebo ^c
+
 po instalaci apod. 
 git config --list //prehled nastavenych pravidel
 git config --global user.name "Petr Novák" //nastaveni jmena uzivatele gitu
 git config --global user.email "petr@novek.com" 
-
+--------------------
 Vytvoreni repository
 ---------------------
 git status
-git init //spusteno v dannem prostoru (pokud jiz existuje tak je prepsan)
-deli se na :
-1)working area(mistni slozka- zalozi se prikazem git init), 
-2)stage area (sledovane ale necomittle po prikaze git add .), 
+git init //spusteno v dannem prostoru kde je ulozen projekt (pokud jiz existuje tak je prepsan)
+zakladni deleni prostoru gitu:
+1)working area(mistni slozka - zalozi se prikazem git init[vznikne slozka .git]), 
+2)stage area (sledovane ale necomittle vznikne po prikaze git add . jedná se o změny určené pro uložení do commitu), 
 3)local repository(zmeny propsane do gitu-) prikazem
-  git commit -m "e.g. Initial commit" (-m = message "text our message")
+4)remote repository
+ 
+ 
+git commit -m "e.g. Initial commit" (-m = message "text our message")
 or
 git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst -nosession" (prikaz nastavujici pojmenovani commitů pres aplikaci notepad-nastavuje ho defaultne)
------------------------
+
 git log --oneline(vypise podrobnosti a vsechny commity-moznost ulozit do souboru. ukoncit vypis klavese q)
-------------------------------
+
 vymazani zaznamu HEAD (pri obnove smazaneho a sledovaneho souboru (vratime se k predchozimu commitu))
 git reset HEAD slouzi pro navrat prikazu add
-git checkout . se vrati k predchozimu commitu
-git push (nahrava se na remote, ale musi již být napárovaný s uctem a repository on Git?)
------------------------
+git checkout . se vrati k predchozimu commitu a zahodi veskere zmeny
+git push (nahrava se na remote, ale musi již být napárovaný s uctem a repository na Gitu)
+------------------------------------
+stazeni projektu do lokal repository
+------------------------------------
 git clone https://github.com/libgit2/libgit2 mylibgit (klonovani existujiciho adresare do adresare mylibgit)
-git diff (co je zmeneno ale zatím neni připraveno k zapsání)
+git diff (co je zmeneno, ale zatím neni připraveno k zapsání)
 git diff --cached ukáže změny, které už jsou připraveny k zapsání
 
 git commit (urcen pro zapsani zmen nachystanych po prikazu git add do git image (repository))
@@ -36,8 +43,9 @@ příklad(nutno včetně cesty) git mv src/utils/TextFile.txt src/utils/Notepad.
 git rm --cached README (odstraneni souboru z prostoru sledovani zmen (napr opomenut do .gitignore))
 git rm (odstraneni souboru z adresare) - pokud je jiz pripraven k zapsani, je treba pouzit parametr -f
 git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné soubory apod.)
-
+---------------
 Nová větev
+---------------
 git branch <název>
     git branch pythonic_files
 Dále možné přepínat se mezi větvemi příkazem git checkout 
@@ -45,7 +53,8 @@ Dále možné přepínat se mezi větvemi příkazem git checkout
 pokud nemame nainstalovany git graph mozno zobrazit stromovou strukturu prikazem:
 git log --online --all --graph
 ---------------------
-merge-spojovani větví (zalezi co vse bylo zmeneno) pokud 
+merge-spojovaní větví (zalezi co vse bylo zmeneno) pokud 
+--------------------------
  jsme zmenili master i dalsi je treba vice commitů
 prepneme se do master verze prikazem git checkout master
 tedy ulozime zmeny v master a pouzijeme prikaz:
@@ -61,6 +70,7 @@ tedy ulozime zmeny v master a pouzijeme prikaz:
  dalsi prikazy viz níže po prikazu git clone...
  -------------
  Pripojeni noveho pc k remote repository
+ -----------------------
  nainstalovani gitu a nastaveni viz vyse (git config --list....)
  Nutne mit vygenerovany SSH klic (pouzivat sifrovane spojeni SSH!)
  spustit git bash 
