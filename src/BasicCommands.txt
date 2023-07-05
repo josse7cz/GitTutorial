@@ -79,6 +79,28 @@ git remote
 git push origin (selze pokud jsme vytvorili novou vetev, která není na remote a pouzijeme prikaz)
   git push --set-upstream origin <nazev branche> (vytvoříme vetev na remote a prepneme se do ni.)
    POZOR pri uprave v jinych nez mnou vytvorenych souborech, vznikaji konflikty!!!
+------------------
+Prace s nove pridanou vetvi z jineho pc
+--------------------
+Pokud na jinem pc pripojenem k projektu ve kterem vznikly nove vetve chceme pracovat s novou vetvi
+ je treba nekoli kroku:
+ git fetch (nacteni zmen na remote)
+ git branch (vypise lokalni vetve)
+ git branch -r(vypise vetve na remotu)
+ git checkout origin/<nazev branche> (stav kdy se vetev zobrazi ale muzeme prohlizet ale ne zapisovat vetev neni 
+  propojena mezi lokalem a remotem)
+ (pro upravy je treba prolinkovani tedy vytvoreni mistni vetve se stejnm nazvem 
+  a nastaveni propojeni na remote vetev)
+ (bud git branch <nazev vetve> a pak git merge <nazev vetve>)
+ git checkout -b <nazev branch> origin/<nazev branch>(prepni se do branche a vytvor ji pokud 
+  zde neni a propoj ji s remote branch)
+ git branch (zkontrolujeme vetve)
+ origin/branch - jsou jen pro cteni
 
- git push -u origin master (odeslání na remote-doporucuji mit vse commited)
+git fetch (nacteni zmen oproti remote)
+git pull (nacteni a slouceni zmen v pracovnim adresari-
+ obsahuje dva prikazy git fetch a git merge)
+
+
+git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
