@@ -107,6 +107,17 @@ Pokud na jinem pc pripojenem k projektu ve kterem vznikly nove vetve chceme prac
  git branch (zkontrolujeme vetve)
  origin/branch - jsou jen pro cteni
  git merge <nazev vetve>-pripojeni vetve do stavající. Muže být nutné vyřešit konflikty
+ ---------------------------
+ konflikty mezi branchemi (jsou zmeneny soubory, které jsou součástí master anebo větví mezi programátory)
+----------------------------
+ je třeba provést ruční dekonflikci-tedy zjistit jaké změny mají být uloženy.
+
+
+
+Při vymazání branche na githubu je třeba zadat příkaz:
+  git fetch --prune origin (tím dojde k odmazání branche i na lokále)
+
+
 
 git fetch (nacteni zmen oproti remote)
 git pull (nacteni a slouceni zmen v pracovnim adresari-
