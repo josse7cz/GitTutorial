@@ -53,7 +53,7 @@ Dále možné přepínat se mezi větvemi příkazem git checkout
 pokud nemame nainstalovany git graph mozno zobrazit stromovou strukturu prikazem:
 git log --online --all --graph
 ---------------------
-merge-spojovaní větví (zalezi co vse bylo zmeneno) pokud 
+git merge <název větve>-spojovaní větví (zalezi co vse bylo zmeneno) pokud 
 --------------------------
  jsme zmenili master i dalsi je treba vice commitů
 prepneme se do master verze prikazem git checkout master
@@ -106,6 +106,7 @@ Pokud na jinem pc pripojenem k projektu ve kterem vznikly nove vetve chceme prac
   zde neni a propoj ji s remote branch)
  git branch (zkontrolujeme vetve)
  origin/branch - jsou jen pro cteni
+ git merge <nazev vetve>-pripojeni vetve do stavající. Muže být nutné vyřešit konflikty
 
 git fetch (nacteni zmen oproti remote)
 git pull (nacteni a slouceni zmen v pracovnim adresari-
