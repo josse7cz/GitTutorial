@@ -124,7 +124,7 @@ ____________________
 Regex prikazy v tomto souboru, zaradi nazvy souboru které bude git ignorovat
 pokud nepridame soubor do gitignore a je jiz sledovany, tak samotny gitignore to nevyresi.
 Je třeba zadat gitu, aby tento soubor nesledoval příkazem 
-  git rm --cached utils/draw.py (soubor zustane v pc ale jiz se nebude odesilat v commitech jeho zmena apod.)
+ (take pokud jsem uz pridal pomoci add ., ale zapomnel jsem udelat commit na jinem souboru) git rm --cached utils/draw.py (soubor zustane v pc ale jiz se nebude odesilat v commitech jeho zmena apod.)
 --------------------------------------------
 
 git fetch (nacteni zmen oproti remote) lepsi je prikaz git pull, ktery se sklada ze dvou 
