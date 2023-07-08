@@ -132,6 +132,13 @@ git fetch (nacteni zmen oproti remote) lepsi je prikaz git pull, ktery se sklada
 git pull (nacteni a slouceni zmen v pracovnim adresari-
  obsahuje dva prikazy git fetch a git merge)
 
+____________________
+Vracení se v čase po příkazech git add a git commit
+-------------------
+pro zapomenutí uložených změn slouí příkaz 
+git reset main.py (vrátí zmeny provedene a addnuté v tomto souboru)
+   git reset --hard(Nejpríšnější příkaz. smaze zmeny, ktere byly pridane a zaroven odebere i z working direktory)
+
 
 git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
