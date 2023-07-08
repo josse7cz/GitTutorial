@@ -6,6 +6,7 @@ po instalaci apod.
 git config --list //prehled nastavenych pravidel
 git config --global user.name "Petr Novák" //nastaveni jmena uzivatele gitu
 git config --global user.email "petr@novek.com" 
+nastavení gitignore - existují připravené šablony dle daného jazyka
 --------------------
 Vytvoreni repository
 ---------------------
@@ -112,14 +113,22 @@ Pokud na jinem pc pripojenem k projektu ve kterem vznikly nove vetve chceme prac
 ----------------------------
  je třeba provést ruční dekonflikci-tedy zjistit jaké změny mají být uloženy.
 
-
+po odmazani pripojene vetve pomoci git branch -d <nazev vetve>je mozne ji vymazat i na remote prikazem 
+  git push origin -d <branch-name>
 
 Při vymazání branche na githubu je třeba zadat příkaz:
   git fetch --prune origin (tím dojde k odmazání branche i na lokále)
+------------------------
+.gitignore-VYTVORIT vzdy na začátku
+____________________
+Regex prikazy v tomto souboru, zaradi nazvy souboru které bude git ignorovat
+pokud nepridame soubor do gitignore a je jiz sledovany, tak samotny gitignore to nevyresi.
+Je třeba zadat gitu, aby tento soubor nesledoval příkazem 
+  git rm --cached utils/draw.py (soubor zustane v pc ale jiz se nebude odesilat v commitech jeho zmena apod.)
+--------------------------------------------
 
-
-
-git fetch (nacteni zmen oproti remote)
+git fetch (nacteni zmen oproti remote) lepsi je prikaz git pull, ktery se sklada ze dvou 
+ prikazu (git fetch a git merge), ktery nacte zmeny na remote a slouci je do vetvi na working space
 git pull (nacteni a slouceni zmen v pracovnim adresari-
  obsahuje dva prikazy git fetch a git merge)
 
