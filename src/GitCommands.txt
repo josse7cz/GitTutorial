@@ -124,7 +124,8 @@ ____________________
 Regex prikazy v tomto souboru, zaradi nazvy souboru které bude git ignorovat
 pokud nepridame soubor do gitignore a je jiz sledovany, tak samotny gitignore to nevyresi.
 Je třeba zadat gitu, aby tento soubor nesledoval příkazem 
- (take pokud jsem uz pridal pomoci add ., ale zapomnel jsem udelat commit na jinem souboru) git rm --cached utils/draw.py (soubor zustane v pc ale jiz se nebude odesilat v commitech jeho zmena apod.)
+ (take pokud jsem uz pridal pomoci add ., ale zapomnel jsem udelat commit na jinem souboru) git rm --cached utils/draw.py (soubor zustane v pc ale jiz se nebude
+  odesilat v commitech a vrati se jeho sledovaní, jeho zmena apod.)
 --------------------------------------------
 
 git fetch (nacteni zmen oproti remote) lepsi je prikaz git pull, ktery se sklada ze dvou 
@@ -133,11 +134,11 @@ git pull (nacteni a slouceni zmen v pracovnim adresari-
  obsahuje dva prikazy git fetch a git merge)
 
 ____________________
-Vracení se v čase po příkazech git add a git commit
+Vracení se v čase po příkazech git commit a git add
 -------------------
 pro zapomenutí uložených změn slouí příkaz 
 git reset main.py (vrátí zmeny provedene a addnuté v tomto souboru)
-   git reset --hard(Nejpríšnější příkaz. smaze zmeny, ktere byly pridane a zaroven odebere i z working direktory)
+   git reset --hard(Nejpřísnější příkaz. smaze zmeny, ktere byly pridane a zaroven odebere i z working direktory)
 
 
 git push -u origin master (odeslání na remote-doporucuji mit vse commited)
