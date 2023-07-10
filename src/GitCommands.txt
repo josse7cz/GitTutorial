@@ -134,12 +134,28 @@ git pull (nacteni a slouceni zmen v pracovnim adresari-
  obsahuje dva prikazy git fetch a git merge)
 
 ____________________
-Vracení se v čase po příkazech git commit a git add
+Vracení se v čase po příkazech git commit a git add(lokálně)
+  dvě kategorie po prikaze add a po prikaze commit
 -------------------
 pro zapomenutí uložených změn slouí příkaz 
 git reset main.py (vrátí zmeny provedene a addnuté v tomto souboru)
-   git reset --hard(Nejpřísnější příkaz. smaze zmeny, ktere byly pridane a zaroven odebere i z working direktory)
+   git reset --hard(Nejpřísnější příkaz. smaze zmeny, ktere byly pridane od posledního commitu 
+    a zaroven je odebere i fyzicky z working direktory)
+git reset odeberou vse co bylo addnuté
 
+git reset --soft <cislo commitu> (vrati vsechny zmeny do stagging area ale zachovavá veškeré změny ve working area)
+git reset --hard <cislo commitu> (Nejpřísnější příkaz. smaze zmeny, ktere byly pridane od posledního commitu 
+      a zaroven je odebere i fyzicky z working direktory)
+git reset --mixed <cislo commitu>
+
+git checkout <cislo commitu>(presunuti HEAD na jiný commit-slouzi pouze pro prohlizeni pro zmeny je 
+    mozne zalozit branch z tohoto mista[git switch -c <nazev branch>])
+    git switch - (vraci na puvodni polohu po checkoutu)
+
+
+git tag (slouzi pro oznaceni např. funkcnich verzí)
+git tag -a v0.9.9 -m "Some message" <tag id kam chceme pridat>
+git push nepridava na remote tagy na to je treba prikaz git push --tagsq
 
 git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
