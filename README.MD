@@ -98,6 +98,11 @@ git diff --cached (ukáže změny, které už jsou připraveny k zapsání[je ve
 
 git commit (urcen pro zapsani zmen nachystanych po prikazu git add do git image (repository))
 git commit -a -m 'nejaky popis zmeny' (parametr -a zahrne pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
+git remote add pb https://github.com/paulboone/ticgit (slouží pro přidání dalšího repository)
+Následně 
+git fetch pb (stazeni změn)
+git remote rename pb paul (prejmenovani prostoru)
+
 ```
 ## Přejmenování
 ```
@@ -195,7 +200,13 @@ git checkout <cislo commitu>(presunuti HEAD na jiný commit-slouzi pouze pro pro
 
 git tag (slouzi pro oznaceni např. funkcnich verzí)
 git tag -a v0.9.9 -m "Some message" <tag id kam chceme pridat>
-git push nepridava na remote tagy na to je treba prikaz git push --tagsq
+git push nepridava na remote tagy na to je treba prikaz:
+git push --tagsq
+git tag -a v1.4 -m "my version 1.4" (umoznuje pridat message)
+pozdejsí přidání tagu:
+git tag -a v1.2 <commit number>
+smazani tagu:
+git push origin --delete <tagname>
 
 git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 ```
