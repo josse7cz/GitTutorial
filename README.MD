@@ -107,7 +107,7 @@ příklad(nutno včetně cesty) git mv src/utils/TextFile.txt src/utils/Notepad.
 ```
 git rm --cached README (odstraneni souboru z prostoru sledovani zmen (napr opomenut do .gitignore))
 git rm (odstraneni souboru z adresare) - pokud je jiz pripraven k zapsani, je treba pouzit parametr -f
-git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné soubory apod.)
+git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné soubory, smaze pridané soubory apod.)
 ```
 ____________________
 ## Práce s větvemi
