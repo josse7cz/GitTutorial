@@ -21,6 +21,9 @@ Pro správné nastavení .gitignore - lze najít připravené šablony daného j
 git rm --cached utils/draw.py 
 ```
 (soubor zustane v pc, ale jiz se nebude odesilat v commitech)
+
+Je však také možné mít další soubory .gitignore v podadresářích. Pravidla v těchto souborech
+vnořených souborech .gitignore se vztahují pouze na soubory v adresáři, ve kterém se nacházejí.
 ____________________
 ## Založení git repository
 ```
@@ -40,12 +43,15 @@ git status (seznam změn)
 git log --oneline(vypíše podrobnosti a všechny commity-možnost ulozit do souboru 
   [>someName.txt]. Ukončit výpis klavese q)
 ```
+git log poskytuje také další parametry jako jsou --grep apod. pro vyhledávání a lepší orientaci
 
 ## Výmaz posledního záznamu git pomocí HEAD (pri obnove smazaneho a sledovaneho souboru (vratime se k predchozimu commitu))
 ```
 git reset HEAD slouzi pro navrat po příkazu add
 git checkout . se vrátí k předchozímu commitu a zahodí veškere zmeny
 git push (nahrava se na remote, ale musi již být   nakonfigurovaný s uctem na GitHubu a musí být vygenerovaný SSh key - viz. níže)
+git commit --amend (umožní přepsat původní zprávu u odevzdaného commitu a případně přidat opomenutý soubor)
+
 ```
 ___________________
  ## REMOTE repository (GitHub etc.), Připojení nového pc k remote repository
