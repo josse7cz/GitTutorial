@@ -51,7 +51,8 @@ Mnohokrát nám samotný git napovídá, jak vrátit provedenou změnu.
 ```
 git commit --amend (nahradí poslední commit. lze třeba jen změnit zprávu anebo přidat opomenutý soubor, který nebyl addnutý)
 git restore <file> (odstrani zmeny ve working directoy, který nebyl addnutý)
-git reset HEAD slouzi pro návrat po příkazu add
+git restore --staged (slouzi pro návrat po příkazu add)
+git reset HEAD slouzi pro návrat po příkazu add (depricated)
 git checkout . se vrátí k předchozímu commitu a zahodí veškere zmeny
 git push (nahrava se na remote, ale musi již být   nakonfigurovaný s uctem na GitHubu a musí být vygenerovaný SSh key - viz. níže)
 ```
