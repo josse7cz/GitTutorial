@@ -50,6 +50,7 @@ git log poskytuje také další parametry jako jsou --grep apod. pro vyhledává
 Mnohokrát nám samotný git napovídá, jak vrátit provedenou změnu.
 ```
 git commit --amend (nahradí poslední commit. lze třeba jen změnit zprávu anebo přidat opomenutý soubor, který nebyl addnutý)
+git restore <file> (odstrani zmeny ve working directoy, který nebyl addnutý)
 git reset HEAD slouzi pro návrat po příkazu add
 git checkout . se vrátí k předchozímu commitu a zahodí veškere zmeny
 git push (nahrava se na remote, ale musi již být   nakonfigurovaný s uctem na GitHubu a musí být vygenerovaný SSh key - viz. níže)
@@ -91,8 +92,8 @@ git push origin (selze pokud jsme vytvorili novou vetev, která není na remote 
   git push --set-upstream origin <nazev branche> (vytvoříme vetev na remote a prepneme se do ni.)
    POZOR pri uprave v jinych nez mnou vytvorenych souborech, vznikaji konflikty!!!
 
-git diff (co je zmeneno, ale zatím neni připraveno k zapsání)
-git diff --cached ukáže změny, které už jsou připraveny k zapsání
+git diff (co je zmeneno, ale zatím neni připraveno k zapsání [nebyl add=je working dir])
+git diff --cached (ukáže změny, které už jsou připraveny k zapsání[je ve stage area])
 
 git commit (urcen pro zapsani zmen nachystanych po prikazu git add do git image (repository))
 git commit -a -m 'nejaky popis zmeny' (parametr -a zahrne pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
