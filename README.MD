@@ -46,12 +46,13 @@ git log --oneline(vypíše podrobnosti a všechny commity-možnost ulozit do sou
 git log poskytuje také další parametry jako jsou --grep apod. pro vyhledávání a lepší orientaci
 
 ## Výmaz posledního záznamu git pomocí HEAD (pri obnove smazaneho a sledovaneho souboru (vratime se k predchozimu commitu))
+
+Mnohokrát nám samotný git napovídá, jak vrátit provedenou změnu.
 ```
-git reset HEAD slouzi pro navrat po příkazu add
+git commit --amend (nahradí poslední commit. lze třeba jen změnit zprávu anebo přidat opomenutý soubor, který nebyl addnutý)
+git reset HEAD slouzi pro návrat po příkazu add
 git checkout . se vrátí k předchozímu commitu a zahodí veškere zmeny
 git push (nahrava se na remote, ale musi již být   nakonfigurovaný s uctem na GitHubu a musí být vygenerovaný SSh key - viz. níže)
-git commit --amend (umožní přepsat původní zprávu u odevzdaného commitu a případně přidat opomenutý soubor)
-
 ```
 ___________________
  ## REMOTE repository (GitHub etc.), Připojení nového pc k remote repository
@@ -94,7 +95,7 @@ git diff (co je zmeneno, ale zatím neni připraveno k zapsání)
 git diff --cached ukáže změny, které už jsou připraveny k zapsání
 
 git commit (urcen pro zapsani zmen nachystanych po prikazu git add do git image (repository))
-git commit -a -m 'nejaky popis zmeny' (parametr -a vylucuje nutnost pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
+git commit -a -m 'nejaky popis zmeny' (parametr -a zahrne pouziti add a zapise veskere zmeny do commitu rovnou-nutna opatrnost)
 ```
 ## Přejmenování
 ```
@@ -110,7 +111,6 @@ git reset --hard (smaze veskere zmeny ve stage area tzn. vrátí odstraněné so
 ```
 ____________________
 ## Práce s větvemi
-
 ```
 git branch <název> (POkud neexistuje je vytvořena)
     git branch pythonic_files
@@ -122,7 +122,6 @@ git checkout <nazev branch> (mozne vypsat větve příkazem git branch)
 Pokud nemame nainstalovany git graph je možné zobrazit stromovou strukturu prikazem:
 ```
 git log --online --all --graph
-
 git merge <název větve>-spojovaní větví (zalezi co vse bylo zmeneno) pokud jsme zmenili master i dalsi je treba vice commitů
 ```
 Přepneme se do master verze příkazem:
@@ -158,8 +157,7 @@ Pokud na jiném PC připojeném k projektu ve kterém vznikly nové větve chcem
  origin/branch - jsou jen pro čteni
  git merge <název větve>-pripojeni větve do stávající. Muže být nutné vyřešit konflikty.
  ```
- 
- ## Konflikty mezi branchemi (jsou změněny soubory, které jsou součástí master anebo více větví mezi programátory)
+ ## Konflikty mezi branchemi (změněny soubory, které jsou součástí master anebo více větví mezi programátory)
 
 Někdy je třeba provést ruční dekonflikci - tedy zjistit jaké změny mají být uloženy.
 pro odmazani pripojene větve pomocí:
