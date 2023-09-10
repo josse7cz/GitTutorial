@@ -214,3 +214,37 @@ git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 
 * clear (příkaz pro vyčištění okna)
 * q (klávesa se používá pro ukončení výpisu nebo CTRL+C)
+
+
+##Jak si vytvaret lokalni commity, ktere nasledne sloucim do logickeho celku a poslu na remote
+
+Obcas je treba udelat si commit lokalne, tak aby se nedostal na remote napr. z duvodu
+nutnosti praci opustit a zaroven nechci prijit o data. Avsak neni vhodne tyto castecne
+zmeny davat na remote. Je tu jednoducha moznost: vytvorit si lokalni vetev s mnozstvim lokalnich
+commitu. Po dokonceni tasku pred nahranim na remote zmeny sloucit a odevzdat je v commitu
+jedinem obsahujicim veskere zmeny s cistym komentarem. U popisu commitu nutno dodrzet nekolik
+pravidel. Zejmena: Zakladni popis typu Pridat tlacitko do kosiku (Bez tecky na konci a s
+limitem do 50 znaku, velke jen pocatecni pismeno.Vlozeni prazdneho radku mezi predmet a popis).
+ Popis: Delka vety do cca 70 znaku, Cely komentar co nejkratsi, ale vystizny.
+
+ Jak na to:
+ Vytvorime si lokalni branch a tvorime commity jak chceme.
+ ```
+ git branch nazevNoveVetve
+ ```
+ Nejake commity...
+ Dale stahneme vzdalenou vetev do ktere chceme odevzdavat
+ pomoci:
+ ```
+ git fetch origin
+ ```
+ A prepneme se do vetve
+ ```
+ git checkout nazevVzdaleneVetve
+ ```
+ A sloucime zmeny z nasi vetve s nazvem napr. private/do-not-use-this
+ ```
+ git merge --squash private/do-not-use-this
+ ```
+A muzeme pushovat na origin...
+Thats all!!
