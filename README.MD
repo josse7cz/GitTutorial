@@ -2,7 +2,7 @@
 
 Je možné, že bez všech techto prikazu se obejdeme použitím Git Hub Desktop, ale co když nebude nainstalován?
 
-Při tvorbě tohoto přehledu jsem čerpal z tutoriálů [Miso Hucko ZDE](https://www.youtube.com/watch?v=wbbWlbRBfmY&list=PLNAMH_0HgWT-ey31hQqrmi_Rgr4OVWgH3&index=19&ab_channel=InformatikasMi%C5%A1om), a z knihy [https://git-scm.com/book/en/v2] za což děkuji.
+Při tvorbě tohoto přehledu jsem čerpal z tutoriálů [Miso Hucko ZDE](https://www.youtube.com/watch?v=wbbWlbRBfmY&list=PLNAMH_0HgWT-ey31hQqrmi_Rgr4OVWgH3&index=19&ab_channel=InformatikasMi%C5%A1om), z knihy [https://git-scm.com/book/en/v2] a [https://levelup.gitconnected.com/good-commit-vs-your-commit-how-to-write-a-perfect-git-commit-message-6e96ab6357fa], za což děkuji.
 
 ## Začínáme:
 po instalaci apod.
@@ -216,7 +216,7 @@ git push -u origin master (odeslání na remote-doporucuji mit vse commited)
 * q (klávesa se používá pro ukončení výpisu nebo CTRL+C)
 
 
-##Jak si vytvaret lokalni commity, ktere nasledne sloucim do logickeho celku a poslu na remote
+# Jak si vytvaret lokalni commity, ktere nasledne sloucim do logickeho celku a poslu na remote
 
 Obcas je treba udelat si commit lokalne, tak aby se nedostal na remote napr. z duvodu
 nutnosti praci opustit a zaroven nechci prijit o data. Avsak neni vhodne tyto castecne
