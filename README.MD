@@ -4,6 +4,8 @@ Je možné, že bez všech techto prikazu se obejdeme použitím Git Hub Desktop
 
 Při tvorbě tohoto přehledu jsem čerpal z tutoriálů [Miso Hucko ZDE](https://www.youtube.com/watch?v=wbbWlbRBfmY&list=PLNAMH_0HgWT-ey31hQqrmi_Rgr4OVWgH3&index=19&ab_channel=InformatikasMi%C5%A1om), z knihy [https://git-scm.com/book/en/v2] a [https://levelup.gitconnected.com/good-commit-vs-your-commit-how-to-write-a-perfect-git-commit-message-6e96ab6357fa], za což děkuji.
 
+Příkazy jsou detailněji rozepsány v souboru tohoto repo ve složce: [https://github.com/josse7cz/GitTutorial/blob/master/src/GitCommands.txt]
+
 ## Začínáme:
 po instalaci apod.
 ```
