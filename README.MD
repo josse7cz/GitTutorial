@@ -250,18 +250,4 @@ limitem do 50 znaku, velke jen pocatecni pismeno.Vlozeni prazdneho radku mezi pr
  ```
 A muzeme pushovat na origin...
 
-
-
-##Nerestartovat automaticky update konteineru
-
-```
-docker update --restart=no [container id]
-```
-Např:
-```
-docker update --restart=no 2cf5
-```
-
-
-
 Thats all!!
